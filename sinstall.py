@@ -48,25 +48,28 @@ menu = """
 print("Welcome To Mrkiller Script ! @Mr_Killer_1\n")
 print(menu)
 
-m = input(">>> ")
+while True:
+    m = input(">>> ")
 
-if m == '1':
-    install_BBR()
-elif m == '2':
-    install_warp()
-elif m == '3':
-    subprocess.run(["bash", "-c", "curl -sSL https://raw.githubusercontent.com/elemen3/wepn/master/wepn.sh | bash"])
-elif m == '4':
-    subprocess.run(["wget", "https://raw.githubusercontent.com/opiran-club/block-iran-ip/main/block-ip.sh"])
-    subprocess.run(["chmod", "+x", "block-ip.sh"])
-    subprocess.run(["./block-ip.sh"])
-elif m == '5':
-    replace_ssh_cipher()
-elif m == '6':
-    ports = input("Enter ports (e.g., 8080,9090,7629): ")
-    add_ports_to_firewall(ports)
-    print("Firewall installed successfully!")
-elif m == '7':
-    subprocess.run(["bash", "-c", "curl -Ls https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh | bash"])
-elif m == '8':
-    pass
+    if m == '1':
+        install_BBR()
+    elif m == '2':
+        install_warp()
+    elif m == '3':
+        subprocess.run(["bash", "-c", "curl -sSL https://raw.githubusercontent.com/elemen3/wepn/master/wepn.sh | bash"])
+    elif m == '4':
+        subprocess.run(["wget", "https://raw.githubusercontent.com/opiran-club/block-iran-ip/main/block-ip.sh"])
+        subprocess.run(["chmod", "+x", "block-ip.sh"])
+        subprocess.run(["./block-ip.sh"])
+    elif m == '5':
+        replace_ssh_cipher()
+    elif m == '6':
+        ports = input("Enter ports (e.g., 8080,9090,7629): ")
+        add_ports_to_firewall(ports)
+        print("Firewall installed successfully!")
+    elif m == '7':
+        subprocess.run(["bash", "-c", "curl -Ls https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh | bash"])
+    elif m == '8':
+        break
+    else:
+        print("Invalid option. Please select a valid option from the menu.")
