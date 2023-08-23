@@ -15,6 +15,14 @@ def install_BBR():
 def install_warp():
     subprocess.run(["bash", "-c", "curl -sSL https://raw.githubusercontent.com/hamid-gh98/x-ui-scripts/main/install_warp_proxy.sh | bash"])
 
+def install_security_script():
+    subprocess.run(["bash", "-c", "bash <(curl -s https://raw.githubusercontent.com/elemen3/wepn/master/wepn.sh)"])
+
+def install_security_script2():
+    subprocess.run(["wget", "https://raw.githubusercontent.com/opiran-club/block-iran-ip/main/block-ip.sh"])
+    subprocess.run(["chmod", "+x", "block-ip.sh"])
+    subprocess.run(["./block-ip.sh"])
+
 def replace_ssh_cipher():
     def replace_line(filepath, pattern, replacement):
         with fileinput.FileInput(filepath, inplace=True) as file:
