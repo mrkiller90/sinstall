@@ -56,7 +56,7 @@ if m == '1':
 elif m == '2':
     install_warp()
 elif m == '3':
-    subprocess.run(["bash", "-c", "curl -sSL https://raw.githubusercontent.com/elemen3/wepn/master/wepn.sh | bash"], shell=True)
+    subprocess.run(["bash", "-c", "curl -sSL https://raw.githubusercontent.com/elemen3/wepn/master/wepn.sh | bash"])
 elif m == '4':
     subprocess.run(["wget", "https://raw.githubusercontent.com/opiran-club/block-iran-ip/main/block-ip.sh"])
     subprocess.run(["chmod", "+x", "block-ip.sh"])
@@ -68,6 +68,6 @@ elif m == '6':
     add_ports_to_firewall(ports)
     print("Firewall installed successfully!")
 elif m == '7':
-    subprocess.run(["bash", "-c", "curl -Ls https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh | bash"], shell=True)
+    subprocess.run(["bash", "-c", "curl -Ls https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh | bash"])
 elif m == '8':
     pass
