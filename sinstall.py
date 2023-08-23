@@ -27,27 +27,15 @@ def banner():
 
     if m == '1':
         os.system("wget -N --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && bash bbr.sh")
-        os.system("clear")
-        time.sleep(3)
-        print("Installed successfully!")
         banner()
     elif m == '2':
         os.system("bash <(curl -sSL https://raw.githubusercontent.com/hamid-gh98/x-ui-scripts/main/install_warp_proxy.sh)")
-        os.system("clear")
-        time.sleep(3)
-        print("Installed successfully!")
         banner()
     elif m == '3':
         os.system("bash <(curl -s https://raw.githubusercontent.com/elemen3/wepn/master/wepn.sh)")
-        os.system("clear")
-        time.sleep(3)
-        print("Installed successfully!")
         banner()
     elif m == '4':
         os.system("wget https://raw.githubusercontent.com/opiran-club/block-iran-ip/main/block-ip.sh && chmod +x block-ip.sh && ./block-ip.sh")
-        os.system("clear")
-        time.sleep(3)
-        print("Installed successfully!")
         banner()
     elif m == '5':
         def replace_ssh_cipher():
@@ -70,22 +58,15 @@ def banner():
                 replace_line(sshd_config_file, pattern, replacement)
 
         replace_ssh_cipher()
-        os.system("clear")
-        time.sleep(3)
         print("SSH encryption configuration completed successfully!")
         banner()
     elif m == '6':
         ports = input("Enter ports (e.g., 8080,9090,7629): ")
         add_ports_to_firewall(ports)
-        os.system("clear")
-        time.sleep(3)
         print("Firewall installed successfully!")
         banner()
     elif m == '7':
         os.system("bash <(curl -Ls https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh)")
-        os.system("clear")
-        time.sleep(3)
-        print("Warp2 installed successfully!")
         banner()
 
 while True:
