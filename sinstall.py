@@ -35,43 +35,40 @@ def replace_ssh_cipher():
         replace_line(sshd_config_file, pattern, replacement)
         print("SSH encryption configuration completed successfully!")
 
+menu = """
+[1] install BBR 
+[2] install warp
+[3] install security script
+[4] install security script2
+[5] install ssh connection encryption 
+[6] install firewall
+[7] install warp2
+[8] Exit
+"""
+
 while True:
-    print("""
-    [1] install BBR 
-    [2] install warp
-    [3] install security script
-    [4] install security script2
-    [5] install ssh connection encryption 
-    [6] install firewall
-    [7] install warp2
-    [8] Exit
-    \n""")
+    print("Welcome To Mrkiller Script ! @Mr_Killer_1\n")
+    print(menu)
+    
     m = input(">>> ")
 
     if m == '1':
         install_BBR()
-        input("Press Enter to continue...")
     elif m == '2':
         install_warp()
-        input("Press Enter to continue...")
     elif m == '3':
-        subprocess.run(["bash", "-c", "curl -s https://raw.githubusercontent.com/elemen3/wepn/master/wepn.sh | bash"])
-        input("Press Enter to continue...")
+        subprocess.run(["bash", "-c", "curl -sSL https://raw.githubusercontent.com/elemen3/wepn/master/wepn.sh | bash"], shell=True)
     elif m == '4':
         subprocess.run(["wget", "https://raw.githubusercontent.com/opiran-club/block-iran-ip/main/block-ip.sh"])
         subprocess.run(["chmod", "+x", "block-ip.sh"])
         subprocess.run(["./block-ip.sh"])
-        input("Press Enter to continue...")
     elif m == '5':
         replace_ssh_cipher()
-        input("Press Enter to continue...")
     elif m == '6':
         ports = input("Enter ports (e.g., 8080,9090,7629): ")
         add_ports_to_firewall(ports)
         print("Firewall installed successfully!")
-        input("Press Enter to continue...")
     elif m == '7':
-        subprocess.run(["bash", "-c", "curl -Ls https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh | bash"])
-        input("Press Enter to continue...")
+        subprocess.run(["bash", "-c", "curl -Ls https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh | bash"], shell=True)
     elif m == '8':
         break
