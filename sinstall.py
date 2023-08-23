@@ -35,18 +35,18 @@ def replace_ssh_cipher():
         replace_line(sshd_config_file, pattern, replacement)
         print("SSH encryption configuration completed successfully!")
 
-menu = """
-[1] install BBR 
-[2] install warp
-[3] install security script
-[4] install security script2
-[5] install ssh connection encryption 
-[6] install firewall
-[7] install warp2
-[8] Exit
-"""
-
 while True:
+    menu = """
+    [1] install BBR 
+    [2] install warp
+    [3] install security script
+    [4] install security script2
+    [5] install ssh connection encryption 
+    [6] install firewall
+    [7] install warp2
+    [8] Exit
+    """
+
     print("Welcome To Mrkiller Script ! @Mr_Killer_1\n")
     print(menu)
     
