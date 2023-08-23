@@ -50,21 +50,28 @@ while True:
 
     if m == '1':
         install_BBR()
+        input("Press Enter to continue...")
     elif m == '2':
         install_warp()
+        input("Press Enter to continue...")
     elif m == '3':
         subprocess.run(["bash", "-c", "curl -s https://raw.githubusercontent.com/elemen3/wepn/master/wepn.sh | bash"])
+        input("Press Enter to continue...")
     elif m == '4':
         subprocess.run(["wget", "https://raw.githubusercontent.com/opiran-club/block-iran-ip/main/block-ip.sh"])
         subprocess.run(["chmod", "+x", "block-ip.sh"])
         subprocess.run(["./block-ip.sh"])
+        input("Press Enter to continue...")
     elif m == '5':
         replace_ssh_cipher()
+        input("Press Enter to continue...")
     elif m == '6':
         ports = input("Enter ports (e.g., 8080,9090,7629): ")
         add_ports_to_firewall(ports)
         print("Firewall installed successfully!")
+        input("Press Enter to continue...")
     elif m == '7':
         subprocess.run(["bash", "-c", "curl -Ls https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh | bash"])
+        input("Press Enter to continue...")
     elif m == '8':
         break
