@@ -23,6 +23,9 @@ def install_security_script2():
     subprocess.run(["chmod", "+x", "block-ip.sh"])
     subprocess.run(["./block-ip.sh"])
 
+def install_warp2():
+    subprocess.run(["bash", "-c", "bash <(curl -Ls https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh)"])
+
 def replace_ssh_cipher():
     def replace_line(filepath, pattern, replacement):
         with fileinput.FileInput(filepath, inplace=True) as file:
