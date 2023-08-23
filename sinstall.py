@@ -1,11 +1,13 @@
 import os
 import time
 import fileinput
-import re 
+import re
+
 def add_ports_to_firewall(ports):
     ports_list = ports.split(",")
     for port in ports_list:
         os.system(f"ufw allow {port}/tcp")
+
 # آپدیت
 os.system("apt update -y && apt upgrade -y && apt install curl -y && apt install git -y && apt install screen -y && apt --fix-broken install")
 os.system("clear")
@@ -80,7 +82,7 @@ def banner():
         print("Firewall installed successfully!")
         banner()
     elif m == '7':
-       os.system("bash <(curl -Ls https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh)")
+        os.system("bash <(curl -Ls https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh)")
         os.system("clear")
         time.sleep(3)
         print("Warp2 installed successfully!")
